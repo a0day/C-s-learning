@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std
+using namespace std ;
 
 int main () 
 {
@@ -7,7 +7,7 @@ int main ()
   cout << "请输入要转换的小写字母：" << endl ;
   cin >> text ;
   text = text + 'A' - 'a' ;
-  cout << text << ;
+  cout << text << endl ;
   
   return 0;
 }
