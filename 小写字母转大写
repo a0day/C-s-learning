@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std
+
+int main () 
+{
+  char text ;
+  cout << "请输入要转换的小写字母：" << endl ;
+  cin >> text ;
+  text = text + 'A' - 'a' ;
+  cout << text << ;
+  
+  return 0;
+}
