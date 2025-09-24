@@ -1,0 +1,4 @@
+1.输出指定位小数
+#include <iomanip>
+double pi = 3.1415926;
+cout<<fixed<<setprecision(2)<<pi<<endl; 
