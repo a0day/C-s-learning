@@ -2,3 +2,35 @@
 #include <iomanip>
 double pi = 3.1415926;
 cout<<fixed<<setprecision(2)<<pi<<endl; 
+
+2.不用其他变量交换两变量的值
+int a ，b;
+swap(a,b);
+
+3.求解一元二次方程组 考虑复数解
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+#include<complex>
+using namespace std;
+int main(){
+int a, b, c;
+/* your code here */
+cin >> a >>b >> c ;
+double delta;
+delta = b*b -4*a*c ;
+if(delta >= 0){
+/* your code here */
+double x1 , x2 ;
+x1 = (-b+sqrt(delta))/(2.0*a) ;
+x2 = (-b-sqrt(delta))/(2.0*a) ;
+if (x1 > x2) swap(x1, x2);
+cout <<fixed<<setprecision(2)<< x1 << "\n" << x2 << endl ;
+}
+else{
+/* your code here */
+complex<double> x1 = (complex<double>(-b) - sqrt(complex<double>(delta))) / (2.0 * a);
+complex<double> x2 = (complex<double>(-b) + sqrt(complex<double>(delta))) / (2.0 * a);
+cout <<fixed<<setprecision(2)<< x1.real() << "\n" << abs(x1.imag()) << endl;
+}
+}
